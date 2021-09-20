@@ -1,15 +1,16 @@
-import keyboard
 from typing import Tuple
+
 from djitellopy import Tello
+
+import keyboard
 
 
 class TelloController:
+    @staticmethod
     def get_key_control(
-        self,
-        tello: Tello, 
-        speed: int = 50
-    )-> Tuple[float, float, float, float]:
-    
+        tello: Tello, speed: int = 50
+    ) -> Tuple[float, float, float, float]:
+
         lr, fb, ud, yv = 0, 0, 0, 0
 
         if keyboard.get_key("a"):
